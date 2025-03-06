@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox.schema.json",
+  "packages": [
+    "nodejs@23.8.0",
+    "go@1.24.0",
+    "golangci-lint@1.64.5",
+    "python@3.14.0a5",
+    "kubectl@1.32.2",
+    "kubernetes-helm@3.17.1",
+    "fzf@0.60.2",
+    "ripgrep@14.1.1"
+  ],
+  "shell": {
+    "init_hook": [],
+    "scripts":   {}
+  }
+}
