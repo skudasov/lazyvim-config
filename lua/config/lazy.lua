@@ -21,6 +21,13 @@ require("lazy").setup({
         -- import/override with your plugins
         { import = "plugins" },
     },
+    git = {
+        throttle = {
+            enabled = true,
+            rate = 30,
+            duration = 1 * 1000, -- in ms
+        },
+    },
     defaults = {
         -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
         -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
@@ -53,34 +60,4 @@ require("lazy").setup({
 })
 
 local harpoon = require("harpoon")
-
 harpoon:setup()
-vim.keymap.set("n", "<leader>H", function()
-    harpoon:list():add()
-end)
-vim.keymap.set("n", "<leader>h", function()
-    harpoon.ui:toggle_quick_menu(harpoon:list())
-end)
-
-vim.keymap.set("n", "<leader>2", function()
-    harpoon:list():select(2)
-end)
-vim.keymap.set("n", "<leader>3", function()
-    harpoon:list():select(3)
-end)
-vim.keymap.set("n", "<leader>4", function()
-    harpoon:list():select(4)
-end)
-vim.keymap.set("n", "<leader>5", function()
-    harpoon:list():select(5)
-end)
-vim.keymap.set("n", "<leader>6", function()
-    harpoon:list():select(6)
-end)
--- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set("n", "<leader>1", function()
-    harpoon:list():prev()
-end)
-vim.keymap.set("n", "<leader>0", function()
-    harpoon:list():next()
-end)
