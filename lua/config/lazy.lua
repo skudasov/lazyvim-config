@@ -21,13 +21,13 @@ require("lazy").setup({
         -- import/override with your plugins
         { import = "plugins" },
     },
-    git = {
-        throttle = {
-            enabled = true,
-            rate = 20,
-            duration = 1 * 1000, -- in ms
-        },
-    },
+    -- git = {
+    --     throttle = {
+    --         enabled = true,
+    --         rate = 20,
+    --         duration = 1 * 1000, -- in ms
+    --     },
+    -- },
     defaults = {
         -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
         -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
@@ -58,6 +58,3 @@ require("lazy").setup({
         },
     },
 })
-
-local harpoon = require("harpoon")
-harpoon:setup()
