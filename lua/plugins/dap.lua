@@ -129,6 +129,46 @@ return {
             dapui.setup()
             require("nvim-dap-virtual-text").setup()
 
+            -- Zig configuration with codelldb
+            dap.adapters.codelldb = {
+                type = "server",
+                port = "${port}",
+                executable = {
+                    command = vim.fn.exepath("codelldb"),
+                    args = { "--port", "${port}" },
+                },
+            }
+
+            dap.configurations.zig = {
+                {
+                    name = "Launch Zig",
+                    type = "codelldb",
+                    request = "launch",
+                    program = function()
+                        return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/zig-out/bin/", "file")
+                    end,
+                    cwd = "${workspaceFolder}",
+                    stopOnEntry = false,
+                    args = {},
+                    runInTerminal = false,
+                },
+                {
+                    name = "Launch Zig (with args)",
+                    type = "codelldb",
+                    request = "launch",
+                    program = function()
+                        return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/zig-out/bin/", "file")
+                    end,
+                    cwd = "${workspaceFolder}",
+                    stopOnEntry = false,
+                    args = function()
+                        local args_string = vim.fn.input("Arguments: ")
+                        return vim.split(args_string, " ")
+                    end,
+                    runInTerminal = false,
+                },
+            }
+
             -- Auto open/close UI
             dap.listeners.after.event_initialized["dapui_config"] = function()
                 dapui.open()
