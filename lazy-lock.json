@@ -8,6 +8,8 @@
   "conform.nvim": { "branch": "master", "commit": "973f3cb73887d510321653044791d7937c7ec0fa" },
   "diagram.nvim": { "branch": "master", "commit": "84fe677aa940605ef248f36c0ea23561690c95eb" },
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
+  "everforest-lua": { "branch": "main", "commit": "2eb7c348f880ba93de4d98cae049c9441f5d4d49" },
+  "evergarden": { "branch": "main", "commit": "d93798f679c914c635d6a5a9b16a8a481b7c0779" },
   "flash.nvim": { "branch": "main", "commit": "3c942666f115e2811e959eabbdd361a025db8b63" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
   "fzf-lua": { "branch": "main", "commit": "504b45d6cedec32d6f0ddeb82f3d7117a94b622b" },
