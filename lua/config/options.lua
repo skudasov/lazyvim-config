@@ -10,3 +10,7 @@ opt.number = false -- Disable line numbers
 opt.relativenumber = false -- Disable relative line numbers
 opt.listchars = "" -- Clear indent guides/listchars
 opt.list = false -- Disable list mode (which shows indent guides)
+
+-- Autosave configuration
+opt.autowrite = true -- Auto-save when switching buffers
+opt.autowriteall = true -- Auto-save on more events
